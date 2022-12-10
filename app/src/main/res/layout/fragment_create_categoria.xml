@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".CreateCategoriaFragment">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/fragmentTituloC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CREAR NUEVA CATEGORIA"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp" >
+
+
+            <ImageView
+                android:id="@+id/img_Categoria"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/rectangulo_image2"
+                android:padding="5dp"
+                android:src="@drawable/motodelivery" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="center"
+                android:padding="3dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnEliminarFotoCategoria"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/btn_redondeado_white"
+                    android:layout_width="1dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+                <ImageView
+                    android:id="@+id/btnBuscarFotoCategoria"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/btn_facebook"
+                    android:layout_width="1dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_baseline_search_24" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE CATEGORIA" />
+
+        <EditText
+            android:id="@+id/txtNombreCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+
+
+        <EditText
+            android:id="@+id/txtCategoriaId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Categoria Id"
+            android:inputType="textPersonName" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <Button
+            android:id="@+id/btnInsertCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CREAR" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
