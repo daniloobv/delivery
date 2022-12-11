@@ -332,14 +332,14 @@ public class EmpresaAdapter extends FirestoreRecyclerAdapter<Empresa, EmpresaAda
             contactar = itemView.findViewById(R.id.contactarEmpresa);
 
 
-            if (VariablesGlobales.tipoUser.equals("empresa")) {
+            if (VariablesGlobales.tipoUser.equals("empresa_")) {
 
                 btnRankear.setVisibility(View.INVISIBLE);
 
             }
 
 
-            if (VariablesGlobales.tipoUser.equals("cliente")){
+            if (VariablesGlobales.tipoUser.equals("cliente_")){
                 btnEditar.setVisibility(View.INVISIBLE);
                 btnEliminar.setVisibility(View.INVISIBLE);
                 categoria.setVisibility(View.INVISIBLE);

@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.catuses.footdeliveryapp.CreateCategoriaFragment;
+import com.catuses.footdeliveryapp.EmpresaActivity;
 import com.catuses.footdeliveryapp.Model.Categoria;
 import com.catuses.footdeliveryapp.ProductosActivity;
 import com.catuses.footdeliveryapp.R;
@@ -119,7 +120,7 @@ public class CategoriaAdapter extends FirestoreRecyclerAdapter<Categoria, Catego
         viewHolder.btnListaEmpresas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, ProductosActivity.class);
+                Intent intent = new Intent(activity, EmpresaActivity.class);
                 intent.putExtra("id_firestores_categoria", id);
 
                 intent.putExtra("categoria_id_", categoria.getCategoria_id());

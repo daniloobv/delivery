@@ -60,7 +60,8 @@ public class EmpresaActivity extends AppCompatActivity {
         categoria_titulo_ = getIntent().getStringExtra("categoria_titulo_");
 
 
-
+txtTituloGaleria = findViewById(R.id.txtTituloGaleria);
+        txtDato = findViewById(R.id.txtDato);
         txtTituloGaleria.setText(categoria_titulo_);
 
         mFirestore = FirebaseFirestore.getInstance();
@@ -71,12 +72,12 @@ public class EmpresaActivity extends AppCompatActivity {
         txtDato.setText(categoria_id_);
         // idCategoria();
 
-        if (VariablesGlobales.tipoUser.equals("administrador")) {
+        if (VariablesGlobales.tipoUser.equals("administrador_")) {
             btnAddEmpresa.setVisibility(View.INVISIBLE);
 
         }
 
-        if (VariablesGlobales.tipoUser.equals("empresa")) {
+        if (VariablesGlobales.tipoUser.equals("empresa_")) {
 
             setTitle("Bienvenido: "+ VariablesGlobales.userName + " [empresario]");
 
@@ -86,7 +87,7 @@ public class EmpresaActivity extends AppCompatActivity {
 
 
 
-        if (VariablesGlobales.tipoUser.equals("cliente")){
+        if (VariablesGlobales.tipoUser.equals("cliente_")){
 
             btnAddEmpresa.setVisibility(View.INVISIBLE);
 
@@ -94,6 +95,32 @@ public class EmpresaActivity extends AppCompatActivity {
             btnAddEmpresa.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(EmpresaActivity.this);
+                    //creamos un objeto detipo builder para un Alerta en pantalla
+                    builder.setMessage("HOLA?")
+                            .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    //cerrarSesion();
+                                }
+                            }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    //aqui el usuario se ha arrepentido de realizar el borrado y no se ejecutara ninguna accion
+                                }
+                            }).show();
+
+
+
+
+
+
+                    Log.d("accion", "hice un clic en nuevo producto");
+
                     CreateEmpresaFragment createEmpresaFragment = new CreateEmpresaFragment();
 
                     Bundle bundle = new Bundle();
