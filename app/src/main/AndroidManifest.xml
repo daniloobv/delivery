@@ -15,6 +15,20 @@
         android:theme="@style/Theme.Footdeliveryapp"
         tools:targetApi="31">
         <activity
+            android:name=".EmpresaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CreateEmpresaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ListaComprasActivity"
             android:exported="false">
             <meta-data
