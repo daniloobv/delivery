@@ -96,29 +96,6 @@ txtTituloGaleria = findViewById(R.id.txtTituloGaleria);
                 @Override
                 public void onClick(View v) {
 
-
-
-                    AlertDialog.Builder builder = new AlertDialog.Builder(EmpresaActivity.this);
-                    //creamos un objeto detipo builder para un Alerta en pantalla
-                    builder.setMessage("HOLA?")
-                            .setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-
-                                    //cerrarSesion();
-                                }
-                            }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    //aqui el usuario se ha arrepentido de realizar el borrado y no se ejecutara ninguna accion
-                                }
-                            }).show();
-
-
-
-
-
-
                     Log.d("accion", "hice un clic en nuevo producto");
 
                     CreateEmpresaFragment createEmpresaFragment = new CreateEmpresaFragment();
@@ -133,9 +110,6 @@ txtTituloGaleria = findViewById(R.id.txtTituloGaleria);
                 }
             });
         }
-
-
-
 
         Log.d("TAG", "variable global tipo usuario var2: " + VariablesGlobales.tipoUser);
 
@@ -182,9 +156,9 @@ txtTituloGaleria = findViewById(R.id.txtTituloGaleria);
                             if (totalE == 0){
                                // avisar();
                             }
-                            if (totalE == 1){
-                                btnAddEmpresa.setVisibility(View.INVISIBLE);
-                            }
+                            //if (totalE == 1){
+                              //  btnAddEmpresa.setVisibility(View.INVISIBLE);
+                            //}
                         }
                     });
         }

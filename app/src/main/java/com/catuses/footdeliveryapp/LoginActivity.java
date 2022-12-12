@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.catuses.footdeliveryapp.Utilidades.VariablesGlobales;
@@ -43,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mAuthx;
     FirebaseFirestore mFirestorex;
     DatabaseReference db_ref;
-
+    TextView mRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
 
-
+        mRegister = findViewById(R.id.bt_register);
         usuarioText = (EditText) findViewById(R.id.txtuser);
         passText = (EditText) findViewById(R.id.pass);
         signInButton = (Button) findViewById(R.id.bt_login);
@@ -120,6 +121,8 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        mRegister.setOnClickListener(v -> Register());
 
 
     }
@@ -232,6 +235,12 @@ public class LoginActivity extends AppCompatActivity {
             revisar_rol();
 
         }
+    }
+
+    private void Register() {
+        Intent i = new Intent(mContext, RegistroActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
     }
 
 }
